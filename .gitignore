@@ -6,3 +6,13 @@ simplesamlphp-*
 
 # Persistent storage directory
 .storage
+
+# docker-compose.yml is left for custom values based on the needs of the Client
+docker-compose.yml
+
+# Miscellenuous
+.idea
+.env
+
+# Exclude configuration files and only provide defaults
+config

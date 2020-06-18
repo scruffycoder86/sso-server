@@ -1,11 +1,8 @@
 version: '3'
 services:
   nginx:
-    ports:
-    - "80:80"
     volumes:
     - "static:/var/simplesamlphp/www/resources/:ro"
-    container_name: nginx
     restart: on-failure
     logging:
       driver: json-file
@@ -21,7 +18,6 @@ services:
     - ".storage/config/:/var/simplesamlphp/config/"
     - ".storage/metadata/:/var/simplesamlphp/metadata/"
     - ".storage/cert/:/var/simplesamlphp/cert/"
-    container_name: phpfpm
     restart: on-failure
     logging:
       driver: json-file
